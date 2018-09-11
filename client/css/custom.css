@@ -1,0 +1,263 @@
+.frametrail-body {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	background: rgba(243, 239, 230, 1);
+}
+
+.frametrail-body[data-frametrail-theme="abgeordnetenwatch"] .mainContainer:not([data-edit-mode="layout"]):not([data-edit-mode="overlays"]):not([data-edit-mode="codesnippets"]):not([data-edit-mode="annotations"]), .frametrail-body[data-frametrail-theme="abgeordnetenwatch"] .loadingScreen, .frametrail-body[data-frametrail-theme="abgeordnetenwatch"] .userLoginOverlay, .frametrail-body[data-frametrail-theme="abgeordnetenwatch"] .titlebar:not(.editActive), .themeItem[data-theme="abgeordnetenwatch"] {
+	--primary-bg-color: rgba(255, 255, 255, 1);
+	--secondary-bg-color: rgba(255, 255, 255, .6);
+	--semi-transparent-bg-color: rgba(255, 255, 255, .8);
+	--primary-fg-color: rgba(80, 80, 80, 1);
+	--secondary-fg-color: rgba(100, 100, 100, 1);
+	--semi-transparent-fg-color: rgba(80, 80, 80, .3);
+	--semi-transparent-fg-highlight-color: rgba(80, 80, 80, .4);
+	--semi-transparent-fg-active-color: var(--secondary-fg-color);
+	--annotation-preview-bg-color: rgba(255 ,255, 255, .2);
+	--highlight-color: #D8D3AD;
+	--tooltip-bg-color: #D8D3AD;
+	--video-background-color: var(--secondary-bg-color);
+}
+
+.loadingScreen {
+	display: none !important;
+}
+
+.titlebar {
+	border-bottom: 1px solid #dfdbd2;
+	/*background: rgba(243, 239, 230, 1);*/
+	background: #fff;
+	min-height: 124px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.titlebar .titlebarTitle {
+	text-align: left;
+	font-size: 16px;
+	padding: 10px 14px;
+    line-height: 20px;
+	font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+}
+
+.titlebar .titlebarTitle .speechTOPs {
+	border-top: 1px solid #dfdbd2;
+	max-width: calc(100% - 700px);
+	height: 38px;
+	overflow: auto;
+	padding-top: 10px;
+	padding-right: 4px;
+	margin-top: 8px;
+	font-size: 1.3em;
+}
+
+.titlebar .titlebarTitle .speechTOPs div {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	color: #888;
+}
+
+.titlebar .titlebarTitle h3 {
+	margin-top: 8px;
+	font-size: 1.3em;
+}
+
+.titlebar .titlebarActionButtonContainer, .titlebar .sharingWidget {
+	display: none;
+}
+
+.titlebar .playerOptions {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 600px;
+	height: calc(100% - 20px);
+}
+
+.titlebar .playerOptions .navigationOptions {
+	float: right;
+	border-left: 1px solid #dfdbd2;
+	width: 690px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.titlebar .playerOptions .navigationOptions a {
+	float: left;
+	position: relative;
+	width: 50%;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 100%;
+	color: #000;
+	opacity: .8;
+	overflow: hidden;
+}
+
+.titlebar .playerOptions .navigationOptions a:hover {
+	opacity: 1;
+}
+
+.titlebar .playerOptions .navigationOptions a:hover:before {
+	color: #000 !important;
+}
+
+.titlebar .playerOptions .navigationOptions a.prevSpeech {
+	float: left;
+	text-align: right;
+	padding-left: 40px;
+}
+
+.titlebar .playerOptions .navigationOptions a.nextSpeech {
+	float: right;
+	padding-right: 40px;
+}
+
+.titlebar .playerOptions .navigationOptions a.prevSpeech:before {
+	position: absolute;
+	top: 50%;
+	left: 26px;
+	margin-top: -10px;
+	font-size: 16px;
+	font-family: awfont !important;
+	content: "\e804";
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #888;
+}
+
+.titlebar .playerOptions .navigationOptions a.nextSpeech:before {
+	position: absolute;
+	top: 50%;
+	right: 26px;
+	margin-top: -10px;
+	font-size: 16px;
+	font-family: awfont !important;
+	content: "\e805";
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #888;
+}
+
+.titlebar .playerOptions .downloadOptions {
+	float: left;
+	width: 80px;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	display: none;
+}
+
+.mainContainer {
+	background-color: rgba(243, 239, 230, 1);
+}
+
+.layoutArea, .hypervideoContainer {
+	background: rgba(243, 239, 230, 1) !important;
+}
+
+.layoutArea {
+	/*--secondary-bg-color: rgba(255, 255, 255, 1);*/
+}
+
+.hypervideoContainer .videoContainer, .areaLeftContainer, .areaRightContainer {
+	border-bottom: 1px solid #dfdbd2;
+}
+
+.areaLeftContainer {
+	border-right: 10px solid rgba(243, 239, 230, 1);
+}
+
+.areaRightContainer {
+	border-left: 10px solid rgba(243, 239, 230, 1);
+}
+
+.areaLeftContainer[data-size="large"], .areaRightContainer[data-size="large"] {
+	flex: 0 0 500px;
+	min-width: 500px;
+}
+
+.layoutArea .contentViewContainer {
+	background: var(--primary-bg-color);
+}
+
+.layoutArea .contentViewContainer .contentViewContents {
+	width: calc(100% - 4px);
+}
+
+.contentViewTab, .layoutArea .contentViewContainer .contentViewContents {
+	background: var(--primary-bg-color) !important;
+}
+
+.titlebarTitle  {
+	font-weight: 500;
+}
+
+.layoutArea .contentViewContainer .contentViewContents .customhtmlContainer {
+	font-size: 1em;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	background: var(--secondary-bg-color);
+	box-sizing: border-box;
+}
+
+.layoutArea .contentViewContainer .contentViewContents .customhtmlContainer .rede {
+	padding: 13px;
+}
+
+.layoutArea .contentViewContainer .contentViewContents .customhtmlContainer .rede .kommentar {
+	padding-bottom: 6px;
+	font-style: italic;
+}
+
+.layoutArea .contentViewContainer .contentViewContents .customhtmlContainer .timebased {
+	background-color: #f3f1ef;
+}
+
+.layoutArea .contentViewContainer .contentViewContents .customhtmlContainer .timebased:hover, .layoutArea .contentViewContainer .contentViewContents .customhtmlContainer .timebased.active {
+	background-color: rgba(246, 138, 102, 1);
+	color: #fff;
+}
+
+.layoutArea[data-area="areaLeft"] .layoutAreaTabs {
+	right: 37px;
+}
+
+.playerContainer .playerProgress .ui-slider-range {
+	background-color: rgba(190, 190, 190, 0.4);
+}
+
+.playerContainer .controls .playerControl, .titlebar button {
+	color: rgba(246, 138, 102, 1);
+}
+
+.hypervideoContainer .videoContainer .videoStartOverlay .playButtonBig {
+	background-color: #fff;
+}
+
+.hypervideoContainer .videoContainer .videoStartOverlay .playButtonBig [class^="icon-"]::before, .hypervideoContainer .videoContainer .videoStartOverlay .playButtonBig [class*=" icon-"]::before {
+	color: #444444;
+}
+
+.playerContainer .controls {
+	border-bottom: 1px solid #dfdbd2;
+}
